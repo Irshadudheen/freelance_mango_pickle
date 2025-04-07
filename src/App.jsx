@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-
+import mongoImage from '../public/images/mangoPickle.jpg'
+import mangoImage2 from '../public/images/mangopickle2.jpg'
 const MangoPickleWebsite = () => {
   const [isWaterVisible, setIsWaterVisible] = useState(false);
   const [cart, setCart] = useState([]);
@@ -67,7 +68,7 @@ const MangoPickleWebsite = () => {
           <div className="md:w-1/2 flex justify-center">
             <div className="bg-white p-4 rounded-full shadow-2xl">
               <div className="rounded-full overflow-hidden w-64 h-64 border-8 border-yellow-300">
-                <img src="/api/placeholder/400/400" alt="Green Mango Pickle" className="w-full h-full object-cover" />
+                <img src={mongoImage} alt="Green Mango Pickle" className="w-full h-full object-cover object-center" />
               </div>
             </div>
           </div>
@@ -79,9 +80,9 @@ const MangoPickleWebsite = () => {
         <h2 className="text-3xl font-bold text-center mb-12 text-green-800">Our Signature Pickles</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
-            { id: 1, name: "Traditional Mango Pickle", price: "₹249", image: "/api/placeholder/300/300" },
-            { id: 2, name: "Spicy Green Mango Delight", price: "₹299", image: "/api/placeholder/300/300" },
-            { id: 3, name: "Sweet & Tangy Mango Relish", price: "₹279", image: "/api/placeholder/300/300" }
+            { id: 1, name: "Traditional Mango Pickle", price: "₹249", image: mongoImage },
+            { id: 2, name: "Spicy Green Mango Delight", price: "₹299", image: mangoImage2 },
+            { id: 3, name: "Sweet & Tangy Mango Relish", price: "₹279", image: mongoImage }
           ].map(product => (
             <div key={product.id} className="bg-white rounded-lg overflow-hidden shadow-lg transform transition hover:scale-105">
               <img src={product.image} alt={product.name} className="w-full h-48 object-cover" />
@@ -116,7 +117,7 @@ const MangoPickleWebsite = () => {
         <h2 className="text-3xl font-bold text-center mb-12 text-green-800">Pickle Blog</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-amber-50 rounded-lg overflow-hidden shadow-md">
-            <img src="/api/placeholder/500/300" alt="Blog Post" className="w-full h-48 object-cover" />
+            <img src={mongoImage} alt="Blog Post" className="w-full h-48 object-cover" />
             <div className="p-6">
               <h3 className="text-xl font-bold text-green-800 mb-2">The Art of Mango Pickle Making</h3>
               <p className="text-gray-700 mb-4">Discover the traditional techniques that make our pickle special and how we preserve the authentic flavors...</p>
@@ -124,7 +125,7 @@ const MangoPickleWebsite = () => {
             </div>
           </div>
           <div className="bg-amber-50 rounded-lg overflow-hidden shadow-md">
-            <img src="/api/placeholder/500/300" alt="Blog Post" className="w-full h-48 object-cover" />
+            <img src={mangoImage2} alt="Blog Post" className="w-full h-48 object-cover" />
             <div className="p-6">
               <h3 className="text-xl font-bold text-green-800 mb-2">Health Benefits of Raw Mango</h3>
               <p className="text-gray-700 mb-4">Green mangoes are packed with nutrients and have been used in traditional medicine for centuries. Learn about the health advantages...</p>
