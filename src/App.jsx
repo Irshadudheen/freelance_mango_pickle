@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import mongoImage from '../public/images/mangoPickle.jpg'
-import mangoImage2 from '../public/images/mangopickle2.jpg'
+import mongoImage from '/images/mangoPickle.jpg'
+import mangoImage2 from '/images/mangopickle2.jpg'
 const MangoPickleWebsite = () => {
   const [isWaterVisible, setIsWaterVisible] = useState(false);
   const [cart, setCart] = useState([]);
